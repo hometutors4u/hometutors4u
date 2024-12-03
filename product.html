@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logosh.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('12.jpg');
+            color: #FFFFFF; /* White text */
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #FF0000; /* Red heading */
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background-color: #1A1A1A; /* Dark gray background */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 280px; /* Reduced width */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .product-card:hover {
+            transform: translateY(-10px); /* Lift card on hover */
+            box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.6); /* Red glow effect */
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .product-title {
+            color: #FF0000; /* Red title */
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .product-description {
+            color: #CCCCCC;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        .add-to-cart-button {
+            background-color: #FF0000;
+            color: white;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart-button:hover {
+            background-color: #D40000;
+        }
+        .whatsapp-button {
+            background-color: #FF0000; /* Red button */
+            color: white;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: #D40000; /* Darker red on hover */
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #FF0000;
+            color: #FFFFFF;
+        }
+        .highlight {
+            color: #FF0000; /* Red highlight */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">☰</label>
+    <div class="logo-container">
+        <img src="logosh.png" alt="FitZone Logo" class="logo-img">
+        <label class="logo-text">HomeTutors4U</label>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="products.html">Why To choose us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>Our Products</h1>
+
+    <div class="product-section">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="1.avif" alt="Dumbbells">
+            </div>
+            <h2 class="product-title">Experienced Tutors</h2>
+            <p class="product-description">Our tutors are highly qualified, trained, and passionate about teaching<p>
+
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="2.avif" alt="Yoga Mat">
+            </div>
+            <h2 class="product-title">Tailored Learning</h2>
+            <p class="product-description">We create custom lesson plans to suit each student’s unique needs and pace.</p>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="3.webp" alt="Resistance Bands">
+            </div>
+            <h2 class="product-title">Convenient Home Tutoring</h2>
+            <p class="product-description">Learn from the comfort of your home, at times that fit your schedule.</p>
+           
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="4.webp" alt="Protein Powder">
+            </div>
+            <h2 class="product-title">Affordable Pricing</h2>
+            <p class="product-description">We offer flexible, budget-friendly packages for all your tutoring needs.</p>
+            
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="5.jpg" alt="Protein Powder">
+            </div>
+            <h2 class="product-title">Focus on Confidence & Results</h2>
+            <p class="product-description">We boost your child’s confidence and track their progress to ensure success.</p>
+            
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="6.webp" alt="Protein Powder">
+            </div>
+            <h2 class="product-title">Wide Range of Subjects</h2>
+            <p class="product-description">From school subjects to competitive exam prep, we cover it all.
+
+            </p>
+            
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="7.jpeg" alt="Protein Powder">
+            </div>
+            <h2 class="product-title">Parent Involvement</h2>
+            <p class="product-description">Regular updates and feedback keep you informed about your child’s progress.</p>
+            
+        </div>
+
+    </div>
+
+    <!-- View Cart button at the bottom of the page -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="form.html" class="whatsapp-button">Choose Us</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 <span class="highlight">HomeTutors4U</span>. All Rights Reserved.</p>
+</footer>
+
+
+
+</body>
+</html>

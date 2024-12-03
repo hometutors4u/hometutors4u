@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logosh.png" type="image/png">
+    <style>
+        body {
+            background-image: url('12.jpg');
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 80px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+
+        }
+        h1 {
+            color: #FF0000;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.3);
+        }
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+        form input[type="submit"] {
+            background-color: #FF0000;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form input[type="submit"]:hover {
+            background-color: #cc0000;
+        }
+        .rating-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .rating-container label {
+            margin: 0 5px;
+            font-size: 18px;
+            color: #FF0000;
+            cursor: pointer;
+        }
+        .rating-container input {
+            display: none;
+        }
+        .rating-container label:hover,
+        .rating-container label:hover ~ label,
+        .rating-container input:checked ~ label {
+            color: #cc0000;
+        }
+        .rating-display {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #FF0000;
+            color: #FFFFFF;
+        }
+        .highlight {
+            color: #FF0000; /* Red highlight */
+            font-weight: bold;
+        }
+        .testimonial-container {
+            background-color: #1A1A1A;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 85%; 
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .testimonial-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.6);
+        }
+        .testimonial-wrapper {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .testimonial-title {
+            color: red;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .testimonial-text {
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .designation {
+            font-size: 14px;
+            color: #ccc;
+        }
+        .quote {
+            color: red;
+            font-size: 24px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 480px) {
+            .testimonial-container {
+                width: 85%; /* Adjust width for smaller screens */
+                padding: 15px;
+            }
+            .testimonial-title {
+                font-size: 22px; /* Smaller title font size */
+            }
+            .testimonial-text {
+                font-size: 14px; /* Adjust text size */
+            }
+            .quote {
+                font-size: 20px;
+            }
+            .author {
+                font-size: 16px;
+            }
+            .designation {
+                font-size: 12px;
+            }
+            form input[type="submit"] {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">☰</label>
+    <div class="logo-container">
+        <a href="index.html"> <img src="logosh.png" alt="FitZone Logo" class="logo-img"></a>
+        <label class="logo-text">HomeTutors4U</label>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="product.html">Why To Choose us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+
+<!-- Feedback Form Section -->
+<div class="container">
+    <h1>We Value Your Feedback!</h1>
+    <p>Let us know how we’re doing and how we can improve your HomeTutors4U experience.</p>
+
+    <form action="https://script.google.com/macros/s/AKfycby75T1k_c8ayVZ7HTfHSWL80Mq58F8ZN2nX-u8vI_Cj-SyxaPOQi7bSpGdcLes9l96O0g/exec" method="post" onsubmit="redirectAfterSubmission(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <div class="rating-container">
+            <p>Rate your experience:</p>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">★</label>
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 stars">★</label>
+        </div>
+
+        <div class="rating-display">
+            <p id="rating-display">Selected Rating: None</p>
+        </div>
+
+        <textarea name="feedback" rows="5" placeholder="Your Feedback" required></textarea>
+        <input type="submit" value="Submit Feedback">
+    </form>
+</div>
+
+<!-- Testimonial Section -->
+<div class="testimonial-wrapper">
+    <div class="testimonial-title">What Parents Say About Us</div>
+    <div class="testimonial-container">
+        <div class="testimonial-text">
+            <span class="quote">“</span>
+            My name is Vijay Malhotra, and I am a businessman looking for authentic home tuition in Delhi NCR. 
+            There are many home tuition providers in the area, but  <span class="highlight">HomeTutors4U</span> is the best in Delhi NCR because it is a genuine bureau that charges nominal fees from parents.
+            <span class="quote">”</span>
+        </div>
+        <div class="author">Vijay Malhotra</div>
+        <div class="designation">Malhotra Service Pvt. Ltd.</div>
+    </div>
+</div>
+<div class="testimonial-wrapper">
+
+    <div class="testimonial-container">
+        <div class="testimonial-text">
+            <span class="quote">“</span>
+            I am Shashi Bhushan. My child's name is Ravi Bhushan. He is in the 9th standard. When I contacted  <span class="highlight">HomeTutors4U</span> for Home Tuition, they provided an experienced teacher, and within two months, my son's performance improved. It is the best home tuition provider in Delhi NCR, and I am satisfied with its services.
+            <span class="quote">”</span>
+        </div>
+        <div class="author">Shashi Bhushan</div>
+        <div class="designation">Government Officer</div>
+    </div>
+</div>
+<div class="testimonial-wrapper">
+
+    <div class="testimonial-container">
+        <div class="testimonial-text">
+            <span class="quote">“</span>
+            <span class="highlight">HomeTutors4U</span> is the best home tuition bureau in Delhi NCR. I am very satisfied with its services. The tutors are very supportive in nature and provide experienced teachers who offer excellent support to our child.
+            <span class="quote">”</span>
+        </div>
+        <div class="author">Dipty Agrawal</div>
+        <div class="designation">Beautician</div>
+    </div>
+</div>
+<div class="testimonial-container">
+    <div class="testimonial-text">
+        <span class="quote">“</span>
+        <span class="highlight">HomeTutors4U</span> is a genuine service provider. They treat guardians and tutors in a good manner and provide well-qualified tutors at affordable prices. Tutors from this bureau are verified by  <span class="highlight">HomeTutors4U</span>, ensuring their ability to teach children.
+        <span class="quote">”</span>
+    </div>
+    <div class="author">Kamlesh Kr.</div>
+    <div class="designation">Sub-inspector</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 <span class="highlight">HomeTutors4U</span>. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // JavaScript to handle star rating display
+    document.querySelectorAll('.rating-container input').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const selectedRating = this.value;
+            document.getElementById('rating-display').textContent = `Selected Rating: ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
+        });
+    });
+    async function redirectAfterSubmission(event) {
+        event.preventDefault();
+        const form = event.target;
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+            });
+
+            if (response.ok) {
+                window.location.href = "feedbackform.html";
+            } else {
+                alert("There was an issue submitting your form. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+        }
+    }
+</script>
+
+</body>
+</html>
+
